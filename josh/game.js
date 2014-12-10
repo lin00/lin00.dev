@@ -1,40 +1,115 @@
 /*global Phaser*/
 /*jslint sloppy:true, browser: true, devel: true, eqeq: true, vars: true, white: true*/
 var game;
-
-var mainState = {
-    // Here we add all the functions we need for our state
-    // For this project we will just have 3 functions
-    preload: function () {
-        // This function will be executed at the beginning
-        // That's where we load the game's assets
-        game.load.image('logo', 'missionbit.png');
+var highScore = 0;
+var flappyJosh = {
+    preload: function() {
+        game.load.image('bg', 'imgs/flappyBirdBackground.png');
+        game.load.image('josh', 'imgs/placeholder_mini.png');
+        game.load.image('pipe', 'imgs/pipe.png');
+        game.load.image('pipe2', 'imgs/pipe2.png');
+        game.load.image('board', 'imgs/board.png');
+        game.load.image('replay', 'imgs/replayButton.png');
+        game.load.image('back', 'imgs/backButton.png');
     },
-    create: function () {
-        // This function is called after the preload function
-        // Here we set up the game, display sprites, etc.
-
-        // Create a game sprite from the logo image positioned
-        // at the center of the game world
-        this.sprite = game.add.sprite(game.world.centerX, game.world.centerY, 'logo');
-        // The position of the sprite should be based on the
-        // center of the image (default is top-left)
-        this.sprite.anchor.setTo(0.5, 0.5);
-        // Change background color to a gray color
-        game.stage.backgroundColor = '#999999';
-    },
-    update: function () {
-        // This function is called 60 times per second
-        // It contains the game's logic
+    create: function() {
+        game.physics.startSystem(Phaser.Physics.ARCADE);
         
-        // Rotate the sprite by 1 degrees
-        this.sprite.angle += 1;
+        //bg
+        this.bg = game.add.sprite(0,0,'bg');
+        this.bg.height = game.world.height;
+        this.bg2 = game.add.sprite(this.bg.width, 0, 'bg');
+        this.bg2.height = game.world.height;
+        
+        //llama
+        this.josh = game.add.sprite(0, game.world.height/2, 'josh');
+        game.physics.arcade.enable(this.josh);
+        this.josh.body.gravity.y = 1000;
+        
+        
+        var space = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+            space.onDown.add(this.jump, this);
+        
+        //pipes
+        this.pipes = game.add.group();  
+        this.pipes.enableBody = true;   
+        this.pipes.createMultiple(5, 'pipe'); 
+        game.time.events.loop(1500, this.addOnePipe, this);
+        
+        this.pipes2 = game.add.group();
+        this.pipes2.enableBody = true;
+        this.pipes2.createMultiple(5, 'pipe2');
+        this.pipes2.checkWorldBounds = true;
+        this.pipes2.outOfBoundsKill = true;
+        //texts
+        this.score = 0;  
+        this.scoreText = game.add.text(game.world.centerX, 0, ''+ this.score, { font: "30px Arial", fill: "#ffffff" });
+            
+    },
+    
+    update: function() {
+        if (!this.josh.inWorld){
+            this.gameOver();
+        }
+        //fix this
+        this.pipes.forEachAlive(function(pipeT) {
+            if (!pipeT.inWorld)
+                this.score++;
+        },this);
+        
+        this.scoreText.setText(game.world.centerX, 0, ''+ this.score, { font: "30px Arial", fill: "#ffffff" });
+        
+        game.physics.arcade.overlap(this.josh , this.pipes, this.gameOver, null, this);
+        game.physics.arcade.overlap(this.josh, this.pipes2, this.gameOver, null, this); 
+
+    },
+    
+    jump: function() {
+        this.josh.body.velocity.y = -350;
+    },
+    
+    gameOver: function() {
+        this.josh.body.velocity.y = 0;
+        this.pipes.forEachAlive(function(pipeT){
+            pipeT.body.velocity.x = 0;
+        },this);
+        this.pipes2.forEachAlive(function(pipeB){
+            pipeB.body.velocity.x = 0;
+        },this);
+        this.gameOverBoard = game.add.sprite(50, 50, 'board');
+        this.back = game.add.button(60, 350, 'back', function() {game.state.start('mgSelection')}, this);
+        this.back.visible = false;
+        this.replay = game.add.button(this.back.position.x + this.back.width/2, this.back.position.y,'replay', this.restart, this);
+        this.scoreText2 = game.add.text(game.world.centerX - 200,game.world.centerY - 100, 'Score:' + this.score, { font: "40px Arial", fill: "black" });
+        this.highScoreText = game.add.text(game.world.centerX - 200,game.world.centerY , 'High score:' + highScore, { font: "40px Arial", fill: "black" });
+    },
+    
+    restart: function() {
+        game.state.start('main');
+    },
+    
+    addOnePipe: function(x, y) { 
+        var pipeT = this.pipes.getFirstDead();
+        pipeT.reset(game.world.width, Math.random() * -200);
+        pipeT.body.velocity.x = -200;
+        pipeT.checkWorldBounds = true;
+        pipeT.outOfBoundsKill = true;
+        
+        
+        var pipeB = this.pipes2.getFirstDead();
+        pipeB.reset(pipeT.position.x, pipeT.position.y + 145  + pipeT.height);
+        pipeB.body.velocity.x = -200;
+        pipeB.checkWorldBounds = true;
+        pipeB.outOfBoundsKill = true;
+        
     }
+        
+        
 };
 
 // Initialize Phaser
 game = new Phaser.Game(640, 480, Phaser.AUTO, 'gameDiv');
 
 // And finally we tell Phaser to add and start our 'main' state
-game.state.add('main', mainState);
+game.state.add('main', flappyJosh);
 game.state.start('main');
