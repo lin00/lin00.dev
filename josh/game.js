@@ -57,7 +57,7 @@ var flappyJosh = {
                 this.score++;
         },this);
         
-        this.scoreText.setText(game.world.centerX, 0, ''+ this.score, { font: "30px Arial", fill: "#ffffff" });
+        this.scoreText.setText(this.score);
         
         game.physics.arcade.overlap(this.josh , this.pipes, this.gameOver, null, this);
         game.physics.arcade.overlap(this.josh, this.pipes2, this.gameOver, null, this); 
