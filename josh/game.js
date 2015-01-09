@@ -21,8 +21,9 @@ var menu = {
         this.start = game.add.button(440, 242, 'start', function() {game.state.start('main');}, this)
         this.music = game.add.audio('jingleBells');
         this.music.play('', 0, 1, true);
+        
  
-    }
+    } 
 };
 
 var flappyJosh = {
