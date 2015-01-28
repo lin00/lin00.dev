@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript">
+			//function for popup text display or change text
+			var changeText = function(text){
+				var display = document.getElementById('text-display');
+				display.innerHTML = text;
+			}
+			var defaultText = function(text){
+				var display = document.getElementById('text-display');
+				display.innerHTML = "";
+			}
+		</script>
+	</head>
+
+	
+
+	<body>
+
+		<div id= "circle-container">
+			<a href='#' id='#'><img src='imgs/lin.jpg' onmouseover="changeText('Hiiiiii I\'m Lin')" onmouseout="defaultText()" /></a> 
+
+			<a href='#' id='deg0'><img src='imgs/awk.png' onmouseover="changeText('Awkward')" onmouseout="defaultText()"/></a>
+
+			<a href='#' id='deg45'><img src='imgs/quiet.png' onmouseover="changeText('Quiet...until you know me')" onmouseout="defaultText()" /></a>
+
+			<a href='#' id='deg135'><img src='imgs/sushi.jpg' onmouseover="changeText('I love sushi')" onmouseout="defaultText()" /></a>
+
+			<a href='#' id='deg180'><img src='imgs/friend.png' onmouseover="changeText('Friends')" onmouseout="defaultText()" /></a>
+
+			<a href='#' id='deg225'><img src='imgs/sketch.jpg' onmouseover="changeText('Doodling and painting')" onmouseout="defaultText()" /></a>
+
+			<a href='#' id='deg315'><img src='imgs/happy.png'onmouseover="changeText('Happy')" onmouseout="defaultText()" /></a>
+		</div>
+		<div id = "text-display"></div>
+		<div id="josh">
+			<a href='josh/index.html' target="_top"><img src="josh/imgs/josh.png" onmouseover="changeText('Flappy Josh')" onmouseout="defaultText()"/> </a>
+		</div>
+	</body>
+
+</html>
