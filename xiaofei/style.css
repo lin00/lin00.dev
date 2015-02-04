@@ -1,0 +1,59 @@
+html {
+    background: url("imgs/bday.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover ;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+body {
+    height: 100%;
+    width:100%;
+}
+
+
+#circle-container {
+    position: relative; 
+    width: 30em;
+    height: 30em;
+    padding: 2.8em; 
+    border-radius: 50%;
+    border:dashed;
+    background-color: transparent;
+    margin: 5em auto 0; 
+}
+
+
+#circle-container a {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 7em;
+    height: 7em;
+    margin: -4em;
+    border: 2px solid #dadada;
+    border-radius: 8px;
+
+}
+#circle-container:focus a{
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+#circle-container img { display: block; width: 100%; }
+#deg0 { transform: translate(12em); }
+#deg45 { transform: rotate(45deg) translate(12em) rotate(-45deg); }
+#deg135 { transform: rotate(135deg) translate(12em) rotate(-135deg); }
+#deg180 { transform: translate(-12em); }
+#deg225 { transform: rotate(225deg) translate(12em) rotate(-225deg); }
+#deg315 { transform: rotate(315deg) translate(12em) rotate(-315deg); }
+
+
+#text-display{
+    font-family: "Comic Sans MS", cursive, sans-serif ;
+    font-size:40px ;
+    text-align: center;
+}

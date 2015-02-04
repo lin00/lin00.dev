@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript">
+			//function for popup text display or change text
+			var changeText = function(text){
+				var display = document.getElementById('text-display');
+				display.innerHTML = text;
+			}
+			var defaultText = function(text){
+				var display = document.getElementById('text-display');
+				display.innerHTML = "";
+			}
+		</script>
+	</head>
+
+	
+
+	<body>
+
+		<div id= "circle-container">
+			<a href='#' id='#'><img src='imgs/IMG_1917.jpg' onmouseover="changeText('Hiiiiii Xiaofei, Happy birthday~ love you hun')" onmouseout="defaultText()" /></a> 
+
+			<a href='#' id='deg0'><img src='imgs/IMG_1384.JPG' onmouseover="changeText('lollllll')" onmouseout="defaultText()"/></a>
+
+			<a href='#' id='deg45'><img src='imgs/IMG_1387.JPG' onmouseover="changeText('Dayum hun, that selfie though')" onmouseout="defaultText()" /></a>
+
+			<a href='#' id='deg135'><img src='imgs/IMG_1824.JPG' onmouseover="changeText('#derp')" onmouseout="defaultText()" /></a>
+
+			<a href='#' id='deg180'><img src='imgs/IMG_1861.PNG' onmouseover="changeText('your face when you see me')" onmouseout="defaultText()" /></a>
+
+			<a href='#' id='deg225'><img src='imgs/IMG_1862.PNG' onmouseover="changeText('So much derp I can\'t even')" onmouseout="defaultText()" /></a>
+
+			<a href='#' id='deg315'><img src='imgs/IMG_1912.PNG' onmouseover="changeText('LOLLLLL NO WORDS NEEDED')" onmouseout="defaultText()" /></a>
+		</div>
+		<div id = "text-display"></div>
+	</body>
+
+</html>
