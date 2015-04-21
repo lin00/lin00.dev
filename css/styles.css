@@ -1,0 +1,81 @@
+ /***** global styles *****/
+
+a:link {
+	color: dimgray;
+	text-decoration: none;
+}
+
+a:hover {
+	color: darkslategray;
+	text-decoration: underline;
+}
+
+.wrapper {
+	width: 100%;
+	height: auto;
+}
+
+/***** header styles *****/
+
+header {
+	width: 100%;
+	background-color: lightgrey;
+	height: 4.25em;/* must match the height of the social media icons  */
+}
+
+header:after {
+    content:'';
+    display:block;
+    clear: both;
+    height: 1px;
+}
+
+.logo {
+	width: 30%;
+	float: left;
+	padding-left: 2.5%;
+}
+
+.social-media-links {
+  	position: absolute;
+    right: 3.4%;
+}
+
+.social-media-links a {
+	float: left;
+}
+
+.social-media-links img {
+	height: 4.25em;
+}
+
+/***** content of page (everything except header) *****/
+
+.content {
+	margin-left: 2.5%;
+}
+
+/***** description styles *****/
+
+.student-description {
+	margin-right: 2.5%;
+}
+
+
+/***** project styles *****/
+
+.projects div {
+	float: left;
+	width: 30%;
+	margin-right: 3.3%; 
+	margin-bottom: 3%;
+}
+
+.projects h3 {
+	text-align: center;
+}
+
+.projects div img {
+	width: 100%;
+	height: 20em;
+}
