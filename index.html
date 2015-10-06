@@ -18,10 +18,51 @@
 
 	<body>
 
-		<div id= "circle-container">
-			<a href='profile.html' id='#'><img src='imgs/lin.jpg' onmouseover="changeText('Hiiiiii I\'m Lin')" onmouseout="defaultText()" /></a> 
+		<div 	data-0="
+					transform: rotate(0deg);
+					width: 30em;
+					height: 30em;
+					left-margin: auto;
+					right-margin: auto;
+					top: 0;
+					" 
+				data-75="
+					transform: rotate(360);
+					width: 5em;
+					height: 5em;
+					position: absolute;
+					top: 10px;
+					left: 100px;
+					" 
 
-			<a href='#' id='deg0'><img src='imgs/awk.png' onmouseover="changeText('Awkward')" onmouseout="defaultText()"/></a>
+					id= "circle-container">
+
+
+			<a href='profile.html' id='#' 
+
+				data-0="
+					width: 100px;
+					height: 100px;
+				"
+				data-75="
+					width: 150px;
+					height: 150px;
+				">
+				<img src='imgs/lin.jpg' onmouseover="changeText('Hiiiiii I\'m Lin')" onmouseout="defaultText()" />
+			</a> 
+
+			<a href='#' id='deg0'
+				data-0="
+					transform: translate(12em, 0em);
+				"
+				data-75="
+					transform: translate(0em, 30em);
+				
+				"
+
+
+
+			><img src='imgs/awk.png' onmouseover="changeText('Awkward')" onmouseout="defaultText()"/></a>
 
 			<a href='#' id='deg45'><img src='imgs/quiet.png' onmouseover="changeText('Quiet...until you know me')" onmouseout="defaultText()" /></a>
 
@@ -33,10 +74,33 @@
 
 			<a href='#' id='deg315'><img src='imgs/happy.png'onmouseover="changeText('Happy')" onmouseout="defaultText()" /></a>
 		</div>
-		<div id = "text-display"></div>
-		<div id="josh">
+		<div id="josh"
+				data-0="
+					left: 0%;
+					top: 10%;
+					transform: scaleX(1);
+
+				"
+				data-75="
+					left: 80%;
+					top: 10%;
+					transform: scaleX(-1);
+				"
+		>
 			<a href='josh/index.html' target="_top"><img src="imgs/bird.png" onmouseover="changeText('Flappy Josh')" onmouseout="defaultText()"/> </a>
 		</div>
+		<div id = "text-display-container">
+			<center>
+				<div id= "text-display" ></div>
+			</center>
+			
+		</div>
+
 	</body>
+
+	<script type="text/javascript" src="skrollr.min.js"></script>
+	<script type="text/javascript">
+		var s = skrollr.init();
+	</script>
 
 </html>
