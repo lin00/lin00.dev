@@ -17,30 +17,37 @@
 	
 
 	<body>
-
-		<div 	data-0="
+			<div 	data-0="
 					transform: rotate(0deg);
 					width: 30em;
 					height: 30em;
 					margin-left: 25%;
 			    	margin-right: 25%;
 			    	margin-top: 10%;
-					" 
+			    	" 
 				data-75="
 					transform: rotate(360);
 					width: 5em;
 					height: 5em;
-					position: absolute;
+					position: fixed;
+					margin-left: 5%;
+   					margin-right: 25%;
+    				margin-top: 5%;
+					top: 10px;
+					left: 80px;
+					" 
+				data-76"
+					transform: rotate(360);
+					width: 5em;
+					height: 5em;
+					position: fixed;
 					margin-left: 5%;
    					margin-right: 25%;
     				margin-top: 10%;
 					top: 10px;
-					left: 100px;
-					" 
-
+					left: 80px;
+				"
 					id= "circle-container">
-
-
 			<a href='profile.html' id='#' 
 
 				data-0="
@@ -51,9 +58,7 @@
 					width: 150px;
 					height: 150px;
 				">
-				<img src='imgs/lin.jpg' onmouseover="changeText('Hiiiiii I\'m Lin')" onmouseout="defaultText()" />
-			</a> 
-
+				<img src='imgs/lin.jpg' onmouseover="changeText('Hiiiiii I\'m Lin')" onmouseout="defaultText()" /></a> 
 			<a href='#' id='deg0'
 				data-0="
 					transform: translate(12em, 0em);
@@ -61,79 +66,81 @@
 				data-75="
 					transform: translate(0em, 28.5em);
 				
-				"><img src='imgs/awk.png' onmouseover="changeText('Awkward')" onmouseout="defaultText()"/>
-			</a>
-
+				"><img src='imgs/awk.png' onmouseover="changeText('Awkward')" onmouseout="defaultText()"/></a>
 			<a href='#' id='deg45'
 				data-0="
 					transform: rotate(45deg) translate(12em, 0em) rotate(-45deg);
 				"
 				data-75="
-					transform: rotate(45deg) translate(17em, 17em) rotate(-45deg);"
-
-			><img src='imgs/quiet.png' onmouseover="changeText('Quiet...until you know me')" onmouseout="defaultText()" /></a>
-
+					transform: rotate(45deg) translate(17em, 17em) rotate(-45deg);"><img src='imgs/quiet.png' onmouseover="changeText('Quiet...until you know me')" onmouseout="defaultText()" /></a>
 			<a href='#' id='deg135'
 				data-0="
 					transform: rotate(135deg) translate(12em,0em) rotate(-135deg);
 				"
 				data-75="
 					transform: rotate(135deg) translate(14em,-14em) rotate(-135deg);
-				"
-
-			><img src='imgs/sushi.jpg' onmouseover="changeText('I love sushi')" onmouseout="defaultText()" /></a>
-
+				"><img src='imgs/sushi.jpg' onmouseover="changeText('I love sushi')" onmouseout="defaultText()" /></a>
 			<a href='https://www.facebook.com/groups/447643455285221/' id='deg180'
 				data-0="
 					transform: translate(-12em,0em);
 				"
 				data-75="
 					transform: translate(0em, 16.5em);
-				"
-
-			><img src='imgs/db.jpg' onmouseover="changeText('Dragon boat')" onmouseout="defaultText()" /></a>
-
+				"><img src='imgs/db.jpg' onmouseover="changeText('Dragon boat')" onmouseout="defaultText()" /></a>
 			<a href='#' id='deg225'
 				data-0="
 					transform: rotate(225deg) translate(12em,0em) rotate(-225deg);
 				"
 				data-75="
 					transform: rotate(225deg) translate(-7em, -7em) rotate(-225deg);
-				"
-
-			><img src='imgs/sketch.jpg' onmouseover="changeText('Doodling and painting')" onmouseout="defaultText()" /></a>
-
+				"><img src='imgs/sketch.jpg' onmouseover="changeText('Doodling and painting')" onmouseout="defaultText()" /></a>
 			<a href='#' id='deg315'
 				data-0="
-					transform: rotate(315deg) translate(12em,0) rotate(-315deg);
+					transform: rotate(300deg) translate(12em,0em) rotate(-300deg);
 				"
 				data-75="
 					transform: rotate(315deg) translate(-25em,25em) rotate(-315deg);
-				"
-			><img src='imgs/happy.png'onmouseover="changeText('Happy')" onmouseout="defaultText()" /></a>
+				"><img src='imgs/happy.png'onmouseover="changeText('Happy')" onmouseout="defaultText()" /></a>
+		</div>
+
 		</div>
 		<div id="josh"
 				data-0="
 					left: 0%;
 					top: 10%;
 					transform: scaleX(1);
-
 				"
 				data-75="
 					left: 80%;
 					top: 10%;
 					transform: scaleX(-1);
-				"
-		>
-			<a href='josh/index.html' target="_top"><img src="imgs/bird.png" onmouseover="changeText('Flappy Josh')" onmouseout="defaultText()"/> </a>
-		</div>
+				"><a href='josh/index.html' target="_top"><img src="imgs/bird.png" onmouseover="changeText('Flappy Josh')" onmouseout="defaultText()"/> </a></div>
 		<div id = "text-display-container">
 			<center>
 				<div id= "text-display" ></div>
-			</center>
-			
+			</center>			
 		</div>
+		<div id="centerContent"
+			deg-0="
+				background: white;
+    			margin-left: 20%;
+    			margin-right: 10%;
+    			margin-top: 70%;
+    			height: 100%;   
+    			text-align: center;
+			"
+			deg-70="
+				background: white;
+   				margin-left: 20%;
+   				margin-right: 10%;
+    			margin-top: 10%;
+    			height: 100%;   
+    			text-align: center;
 
+			"
+		>
+			boo
+		
 	</body>
 
 	<script type="text/javascript" src="skrollr.min.js"></script>
