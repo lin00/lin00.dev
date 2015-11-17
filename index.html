@@ -1,6 +1,12 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="style.css">
+		<!-- link to favicon  -->
+		<link rel="icon" type="image/png" href="#">
+
+		<!-- link to css -->
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
 		<script type="text/javascript">
 			//function for popup text display or change text
 			var changeText = function(text){
@@ -36,17 +42,6 @@
 					top: 10px;
 					left: 80px;
 					" 
-				data-76"
-					transform: rotate(360);
-					width: 5em;
-					height: 5em;
-					position: fixed;
-					margin-left: 5%;
-   					margin-right: 25%;
-    				margin-top: 10%;
-					top: 10px;
-					left: 80px;
-				"
 					id= "circle-container">
 			<a href='profile.html' id='#' 
 
@@ -107,39 +102,114 @@
 		<div id="josh"
 				data-0="
 					left: 0%;
-					top: 10%;
 					transform: scaleX(1);
 				"
 				data-75="
 					left: 80%;
-					top: 10%;
 					transform: scaleX(-1);
+					position: fixed;
 				"><a href='josh/index.html' target="_top"><img src="imgs/bird.png" onmouseover="changeText('Flappy Josh')" onmouseout="defaultText()"/> </a></div>
 		<div id = "text-display-container">
 			<center>
 				<div id= "text-display" ></div>
 			</center>			
 		</div>
-		<div id="centerContent"
-			deg-0="
-				background: white;
-    			margin-left: 20%;
-    			margin-right: 10%;
-    			margin-top: 70%;
-    			height: 100%;   
-    			text-align: center;
+		<div id="profile" class="centerContent"
+			data-0="
+				margin-top: 60%;
 			"
-			deg-70="
-				background: white;
-   				margin-left: 20%;
-   				margin-right: 10%;
-    			margin-top: 10%;
-    			height: 100%;   
-    			text-align: center;
-
+			data-75="
+				margin-top: 20%;
 			"
 		>
-			boo
+				<div class="wrapper">
+
+				<!-- header with social media and logo -->
+				<header>
+					<div class="logo">
+						<h2>Lin Chen</h2>
+					</div>
+					<div class="social-media-links">
+						<a href="http://www.linkedin.com/in/lichen0"><img src="imgs/linkedin.png"></a><!-- linkedin -->
+						<!-- youtube  <a href="#"><img src="imgs/youtube.png"></a>   -->
+						<!-- twitter  <a href="#"><img src="imgs/twitter.png"></a> -->
+						<a href="https://www.tumblr.com/blog/totorolylin"><img src="imgs/tumblr.png"></a><!-- tumblr -->
+						<a href="https://github.com/lin00"><img src="imgs/github.jpg"></a><!-- github -->
+					</div>
+				</header>
+				<section class="content">	
+					<!-- student description section -->
+					<section class="student-description">
+						<p>Hello my name is Lin. This is a web page showcasing all my work done at <a href="http://gurlgamers.tumblr.com/">G:url Gaming</a>, a Gaming Design program at <a href="http://www.bavc.org/">BAVC</a>.</p>
+		
+						<!-- personal description/statement -->
+						<p>A paragraph about me . . . <br><br>
+							Hi! My name is Lin Chen, I'm currently a sophomore at Lowell High School. Some of my hobbies include Dragon-boating, coding, swimming, and playing games. Starting January 2015, I started working at Mission Bit as a Hacker Lab Assistant and interning at Bay Area Video Coalition as a video game designer. 
+						</p>
+					</section><!-- end student description -->
+		
+					<!-- project section -->
+					<section class="projects">
+						
+						<!-- project 1 -->
+						<div>
+							<a href="iceBreakerActivity/linsSelfOrbit.html">
+								<h3>Self Orbit Project</h3>
+								<img src="imgs/orbit.png">
+							</a>
+						</div>
+		
+						<!-- project 2 -->
+						<div>
+							<a href="sphereEvilAttackWeb/sphereEvilAttackWeb.html">
+								<h3>First Unity Project</h3>
+								<img src="imgs/SEA.png">
+							</a>
+						</div>
+		
+						<!-- project 3 -->
+						<div>
+							<a href="#">
+								<h3>Project Title 3</h3>
+								<img src="https://placekitten.com/g/500/500">
+							</a>
+						</div>
+		
+						<!-- project 4 -->
+						<div>
+							<a href="#">
+								<h3>Project Title 4</h3>
+								<img src="https://placekitten.com/g/610/610">
+							</a>
+						</div>
+
+						<!-- project 5 -->
+						<div>
+							<a href="#">
+								<h3>Project Title 5</h3>
+								<img src="https://placekitten.com/g/550/550">
+							</a>
+						</div>
+
+						<!-- project 6 -->
+						<div>
+							<a href="#">
+								<h3>Project Title 6</h3>
+								<img src="https://placekitten.com/g/650/650">
+							</a>
+						</div>
+					</section><!-- end project section -->
+				</section><!-- end content -->
+			</div><!-- end wrapper -->
+		</div>
+
+		<div id="doodling" class="centerContent">
+			<header>
+					<div class="logo">
+						<h2>Doodling</h2>
+					</div>
+				</header>
+		</div>
 		
 	</body>
 

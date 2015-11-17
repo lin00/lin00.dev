@@ -11,14 +11,14 @@ a:hover {
 }
 
 .wrapper {
-	width: 100%;
+	width: auto;
 	height: auto;
 }
 
 /***** header styles *****/
 
 header {
-	width: 100%;
+	width: auto%;
 	background-color: lightgrey;
 	height: 4.25em;/* must match the height of the social media icons  */
 }
@@ -38,7 +38,7 @@ header:after {
 
 .social-media-links {
   	position: absolute;
-    right: 3.4%;
+    right: 10%;
 }
 
 .social-media-links a {
