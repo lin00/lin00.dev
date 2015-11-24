@@ -53,6 +53,8 @@ header:after {
 
 .content {
 	margin-left: 2.5%;
+	height: 900px;
+	margin-bottom: 10%
 }
 
 /***** description styles *****/

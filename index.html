@@ -17,6 +17,29 @@
 				var display = document.getElementById('text-display');
 				display.innerHTML = "";
 			}
+			//scroll
+			window.smoothScroll = function(target) {
+		    var scrollContainer = target;
+		    do { //find scroll container
+		        scrollContainer = scrollContainer.parentNode;
+		        if (!scrollContainer) return;
+		        scrollContainer.scrollTop += 1;
+		    } while (scrollContainer.scrollTop == 0);
+
+		    var targetY = 0;
+		    do { //find the top of target relatively to the container
+		        if (target == scrollContainer) break;
+		        targetY += target.offsetTop;
+		    } while (target = target.offsetParent);
+
+		    scroll = function(c, a, b, i) {
+		        i++; if (i > 30) return;
+		        c.scrollTop = a + (b - a) / 30 * i;
+		        setTimeout(function(){ scroll(c, a, b, i); }, 20);
+		    }
+		    // start scrolling
+		    scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+			}
 		</script>
 	</head>
 
@@ -43,7 +66,7 @@
 					left: 80px;
 					" 
 					id= "circle-container">
-			<a href='profile.html' id='#' 
+			<a href='#' id='#' 
 
 				data-0="
 					width: 100px;
@@ -53,7 +76,7 @@
 					width: 150px;
 					height: 150px;
 				">
-				<img src='imgs/lin.jpg' onmouseover="changeText('Hiiiiii I\'m Lin')" onmouseout="defaultText()" /></a> 
+				<img src='imgs/lin.jpg' onmouseover="changeText('Hiiiiii I\'m Lin')" onmouseout="defaultText()" onclick="smoothScroll(document.getElementById('circle-container'))"/></a> 
 			<a href='#' id='deg0'
 				data-0="
 					transform: translate(12em, 0em);
@@ -75,20 +98,20 @@
 				data-75="
 					transform: rotate(135deg) translate(14em,-14em) rotate(-135deg);
 				"><img src='imgs/sushi.jpg' onmouseover="changeText('I love sushi')" onmouseout="defaultText()" /></a>
-			<a href='https://www.facebook.com/groups/447643455285221/' id='deg180'
+			<a href='#' id='deg180'
 				data-0="
 					transform: translate(-12em,0em);
 				"
 				data-75="
-					transform: translate(0em, 16.5em);
-				"><img src='imgs/db.jpg' onmouseover="changeText('Dragon boat')" onmouseout="defaultText()" /></a>
+					transform: translate(0em, 14.5em);
+				"><img src='imgs/conditioning.jpg' onmouseover="changeText('Dragon boat')" onmouseout="defaultText()" onclick="smoothScroll(document.getElementById('db'))"/></a>
 			<a href='#' id='deg225'
 				data-0="
 					transform: rotate(225deg) translate(12em,0em) rotate(-225deg);
 				"
 				data-75="
 					transform: rotate(225deg) translate(-7em, -7em) rotate(-225deg);
-				"><img src='imgs/sketch.jpg' onmouseover="changeText('Doodling and painting')" onmouseout="defaultText()" /></a>
+				"><img src='imgs/tree.PNG' onmouseover="changeText('Doodling and painting')" onmouseout="defaultText()" onclick="smoothScroll(document.getElementById('doodling'))"/></a>
 			<a href='#' id='deg315'
 				data-0="
 					transform: rotate(300deg) translate(12em,0em) rotate(-300deg);
@@ -116,7 +139,7 @@
 		</div>
 		<div id="profile" class="centerContent"
 			data-0="
-				margin-top: 60%;
+				margin-top: 99%;
 			"
 			data-75="
 				margin-top: 20%;
@@ -140,11 +163,10 @@
 				<section class="content">	
 					<!-- student description section -->
 					<section class="student-description">
-						<p>Hello my name is Lin. This is a web page showcasing all my work done at <a href="http://gurlgamers.tumblr.com/">G:url Gaming</a>, a Gaming Design program at <a href="http://www.bavc.org/">BAVC</a>.</p>
 		
 						<!-- personal description/statement -->
-						<p>A paragraph about me . . . <br><br>
-							Hi! My name is Lin Chen, I'm currently a sophomore at Lowell High School. Some of my hobbies include Dragon-boating, coding, swimming, and playing games. Starting January 2015, I started working at Mission Bit as a Hacker Lab Assistant and interning at Bay Area Video Coalition as a video game designer. 
+						<p>
+							Hi! My name is Lin Chen, I'm currently a Junior at Lowell High School. Some of my hobbies include Dragon-boating, coding, swimming, and playing games. Starting January 2015, I started working at Mission Bit as a Hacker Lab Assistant and interning at Bay Area Video Coalition as a video game designer. 
 						</p>
 					</section><!-- end student description -->
 		
@@ -208,8 +230,50 @@
 					<div class="logo">
 						<h2>Doodling</h2>
 					</div>
-				</header>
+			</header>
+			<section class="student-description">
+				<p>
+					I like doodling and facepainting. I sketch and paint in my free time whenever I don't want to think.
+					<br>
+					<br>
+				</p>
+			</section>
+
+			<div>
+				<img src="imgs/ninja.JPG" id="doodlingIMGS">
+				<img src="imgs/cat.JPG" id="doodlingIMGS">
+				<img src="imgs/tree.PNG" id="doodlingIMGS">
+				<img src="imgs/sunAndTree.PNG" id="doodlingIMGS">
+				<img src="imgs/bootifly.JPG" id="doodlingIMGS">
+				<img src="imgs/rainbow.JPG" id="doodlingIMGS">
+			</div>
+
+
 		</div>
+
+		<div id="db" class="centerContent">
+			<header>
+					<div class="logo">
+						<h2>Dragon Boat</h2>
+					</div>
+			</header>
+			<section class="student-description">
+				<p>
+					I've been on Lowell's dragon boat team since 2012. We race at Treasure Island, Youth Race, Macau International Race, and Vancouver. I am a conditioning leader, steersman, and a paddler.
+					<br>
+					<br>
+				</p>
+			</section>
+
+			<div>
+				<p>This is my conditioning group</p>
+				<img src="imgs/conditioning.jpg" id="dbIMGS">
+				<br>
+			</div>
+
+
+		</div>
+
 		
 	</body>
 

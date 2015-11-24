@@ -36,7 +36,7 @@ body {
 
 
 #text-display-container{
-    position: absolute;
+    position: fixed;
     font-family: Impact, Charcoal, sans-serif;
     font-size:40px ;
     bottom: 50px;
@@ -52,10 +52,20 @@ body {
     background: white;
     margin-left: 20%;
     margin-right: 10%;
-    height: 80%;   
-    text-align: center;
+    text-align: center; 
 }
 
 #doodling {
     margin-top: 20%;
+}
+#doodlingIMGS {
+    width: 80%;
+}
+
+#db{
+    margin-top: 20%;
+}
+
+#dbIMGS{
+    width: 80%;
 }
