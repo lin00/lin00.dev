@@ -1,0 +1,14 @@
+.title {
+    text-align: center;
+}
+
+.game-area {
+    width:640;
+    height:480;
+        
+}
+
+.game-area canvas {
+    margin: 0 auto;
+        
+}
