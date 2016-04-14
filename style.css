@@ -16,6 +16,8 @@ body {
     padding: 2.8em; 
     border-radius: 50%;
     background-color: #FFF;
+    position:absolute;
+
 }
 
 
@@ -29,6 +31,7 @@ body {
     height: 6em;
     margin: -3em;
 
+
 }
 
 #circle-container img { display: block; width: 100%; }
@@ -37,7 +40,8 @@ body {
 
 #text-display-container{
     position: fixed;
-    font-family: Impact, Charcoal, sans-serif;
+    font-family: 'Londrina Outline', cursive;
+    color:black;
     font-size:40px ;
     bottom: 50px;
     width: 100%;
