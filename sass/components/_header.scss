@@ -1,0 +1,30 @@
+@import "../base/colors";
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background-color: $dark-blue;
+  display: flex;
+  z-index: 100;
+  .row-of-buttons{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    .button {
+      width: 10%;
+      margin: 20px;
+    }
+  }
+  .linkedin {
+    img{
+      height: 50px;
+      margin: 0px 20px;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: $white;
+  }
+}

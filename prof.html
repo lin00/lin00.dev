@@ -1,0 +1,302 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<!-- link to favicon  -->
+		<link rel="icon" type="image/png" href="#">
+
+		<!-- link to css -->
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link href='https://fonts.googleapis.com/css?family=Londrina+Outline' rel='stylesheet' type='text/css'>
+		<script type="text/javascript">
+			//function for popup text display or change text
+			var changeText = function(text){
+				var display = document.getElementById('text-display');
+				display.innerHTML = text;
+			}
+			var defaultText = function(text){
+				var display = document.getElementById('text-display');
+				display.innerHTML = "";
+			}
+
+
+			//scroll
+			window.smoothScroll = function(target) {
+		    var scrollContainer = target;
+		    do { //find scroll container
+		        scrollContainer = scrollContainer.parentNode;
+		        if (!scrollContainer) return;
+		        scrollContainer.scrollTop += 1;
+		    } while (scrollContainer.scrollTop == 0);
+
+		    var targetY = 0;
+		    do { //find the top of target relatively to the container
+		        if (target == scrollContainer) break;
+		        targetY += target.offsetTop;
+		    } while (target = target.offsetParent);
+
+		    scroll = function(c, a, b, i) {
+		        i++; if (i > 30) return;
+		        c.scrollTop = a + (b - a) / 30 * i;
+		        setTimeout(function(){ scroll(c, a, b, i); }, 20);
+		    }
+		    // start scrolling
+		    scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+			}
+		</script>
+	</head>
+
+	
+
+	<body>
+			<div 	data-0="
+					transform: rotate(0deg);
+					width: 30em;
+					height: 30em;
+					margin-left: 25%;
+			    	margin-right: 25%;
+			    	margin-top: 10%;
+			    	" 
+				data-75="
+					transform: rotate(360);
+					width: 5em;
+					height: 5em;
+					position: fixed;
+					margin-left: 5%;
+   					margin-right: 25%;
+    				margin-top: 5%;
+					top: 10px;
+					left: 80px;
+					" 
+					id= "circle-container">
+			<a href='#' id='#' 
+
+				data-0="
+					width: 100px;
+					height: 100px;
+				"
+				data-75="
+					width: 150px;
+					height: 150px;
+				">
+				<img src='imgs/lin.jpg' onmouseover="changeText('Hiiiiii I\'m Lin. Scroll down slowly')" onmouseout="defaultText()" onclick="smoothScroll(document.getElementById('circle-container'))"/></a> 
+<!-- 		 	<a href='#' id='deg0'
+				data-0="
+					transform: translate(12em, 0em);
+				"
+				data-75="
+					transform: translate(0em, 28.5em);
+				
+				"><img src='http://www.sfusd.edu/assets/sfusd-staff/schools-and-facilities/images/mlk_470.jpg' onmouseover="changeText('Teaching at MLK')" onmouseout="defaultText()"/></a>
+			<a href='#' id='deg45'
+				data-0="
+					transform: rotate(45deg) translate(12em, 0em) rotate(-45deg);
+				"
+				data-75="
+					transform: rotate(45deg) translate(17em, 17em) rotate(-45deg);"><img src='imgs/quiet.png' onmouseover="changeText('Quiet...until you know me')" onmouseout="defaultText()" /></a> -->
+			<a href='#' id='deg135'
+				data-0="
+					transform: rotate(145deg) translate(12em,0em) rotate(-145deg);
+				"
+				data-75="
+					transform: rotate(0deg) translate(0.2em, 20em) rotate(0deg);
+				"><img src='https://www.missionbit.com/images/logo-fb.png' onmouseover="changeText('Mission Bit')" onmouseout="defaultText()" onclick="smoothScroll(document.getElementById('mbit'))"/></a> 
+			<a href='#' id='deg180'
+				data-0="
+					transform: rotate(210deg) translate(-12em,0em) rotate(-210deg);
+				"
+				data-75="
+					transform: rotate(0deg) translate(0.2em, 15em) rotate(0deg);
+				"><img src='imgs/conditioning.jpg' onmouseover="changeText('Dragon boat')" onmouseout="defaultText()" onclick="smoothScroll(document.getElementById('db'))"/></a>
+			<a href='#' id='deg225'
+				data-0="
+					transform: rotate(270deg) translate(12em,0em) rotate(-270deg);
+				"
+				data-75="
+					transform: rotate(0deg) translate(0.2em, 10em) rotate(0deg);
+				"><img src='imgs/tree.PNG' onmouseover="changeText('Doodling and painting')" onmouseout="defaultText()" onclick="smoothScroll(document.getElementById('doodling'))"/></a>
+			<!-- <a href='#' id='deg315'
+				data-0="
+					transform: rotate(300deg) translate(12em,0em) rotate(-300deg);
+				"
+				data-75="
+					transform: rotate(315deg) translate(-25em,25em) rotate(-315deg);
+				"><img src='imgs/happy.png'onmouseover="changeText('Happy')" onmouseout="defaultText()" /></a> -->
+		</div>
+
+		</div>
+		<div id="josh"
+				data-0="
+					left: 0%;
+					transform: scaleX(1);
+				"
+				data-75="
+					left: 80%;
+					transform: scaleX(-1);
+					position: fixed;
+				"><a href='josh/index.html' target="_top"><img src="imgs/bird.png" onmouseover="changeText('Flappy Josh')" onmouseout="defaultText()"/> </a></div>
+		<div id = "text-display-container">
+			<center>
+				<div id= "text-display" ></div>
+			</center>			
+		</div>
+		<div id="profile" class="centerContent"
+			data-0="
+				margin-top: 99%;
+			"
+			data-75="
+				margin-top: 20%;
+			"
+		>
+				<div class="wrapper">
+
+				<!-- header with social media and logo -->
+				<header>
+					<div class="logo">
+						<h2>Lin Chen</h2>
+					</div>
+					<div class="social-media-links">
+						<a href="www.linkedin.com/in/lin00"><img src="imgs/linkedin.png"></a><!-- linkedin -->
+						<!-- youtube  <a href="#"><img src="imgs/youtube.png"></a>   -->
+						<!-- twitter  <a href="#"><img src="imgs/twitter.png"></a> -->
+						<a href="ChenLin-Resume.pdf"><img src="https://cdn4.iconfinder.com/data/icons/business-management-2/256/CV-512.png" target="_blank"></a><!-- tumblr -->
+						<a href="https://github.com/lin00"><img src="imgs/github.jpg"></a><!-- github -->
+					</div>
+				</header>
+				<section class="content">	
+					<!-- student description section -->
+					<section class="student-description">
+		
+						<!-- personal description/statement -->
+						<p>
+							Hi! My name is Lin Chen, I'm currently a Junior at Lowell High School. Some of my hobbies include Dragon-boating, coding, swimming, and playing games. Starting January 2015, I started working at Mission Bit as a Hacker Lab Assistant and interning at Bay Area Video Coalition as a video game designer. I now volunteer as an instructor for Mission Bit at Martin Luther King Jr. Middle School to teach an introductory class to programming with Scratch.
+						</p>
+					</section><!-- end student description -->
+		
+					<!-- project section -->
+					<section class="projects">
+						
+						<!-- project 1 -->
+						<div>
+							<a href="iceBreakerActivity/linsSelfOrbit.html">
+								<h3>Self Orbit Project</h3>
+								<img src="imgs/orbit.png">
+							</a>
+						</div>
+		
+						<!-- project 2 -->
+						<div>
+							<a href="sphereEvilAttackWeb/sphereEvilAttackWeb.html">
+								<h3>First Unity Project</h3>
+								<img src="imgs/SEA.png">
+							</a>
+						</div>
+		
+						<!-- project 3 -->
+						<div>
+							<a href="llamaEmpire/index.html">
+								<h3>Llama Empire</h3>
+								<img src="imgs/llamaMain.png">
+							</a>
+						</div>
+		
+						<!-- project 4 -->
+						<div>
+							<a href="josh/index.html">
+								<h3>Flappy Josh</h3>
+								<img src="imgs/flappyJosh.png">
+							</a>
+						</div>
+
+						<!-- project 5 -->
+						<div>
+							<a href="https://github.com/MissionBit/SnailAssalt">
+								<h3>Snail Assalt</h3>
+								<img src="imgs/snailAssalt.png">
+							</a>
+						</div>
+
+						<!-- project 6 -->
+						<div>
+							<a href="cheeseDash/index.html">
+								<h3>Cheese Dash</h3>
+								<img src="imgs/cheeseDash.png">
+							</a>
+						</div>
+					</section><!-- end project section -->
+				</section><!-- end content -->
+			</div><!-- end wrapper -->
+		</div>
+
+		<div id='mbit' class='centerContent'>
+			<header>
+			<div class="logo">
+				<h2>Mission Bit</h2>
+			</div>
+			</header>
+			<section class="student-description">
+			Since spring of 2016, I have been teaching the introductory class to Scratch at Martin Luther King Jr. Middle School with Elias Fox. We designed the curriculum from scratch, as it is our first time officially teaching a class. I am very eager to share what I've learned to children who share the same interests. <br>
+			<a href="https://github.com/lin00/Intro-Scratch-Class"> Link to curriculum + wiki</a><br><br>
+
+
+			</section>
+		</div>
+
+		<div id="doodling" class="centerContent">
+			<header>
+					<div class="logo">
+						<h2>Doodling</h2>
+					</div>
+			</header>
+			<section class="student-description">
+				<p>
+					I like doodling and facepainting. I sketch and paint in my free time or whenever I don't want to think.
+					<br>
+					<br>
+				</p>
+			</section>
+
+			<div>
+				<img src="imgs/ninja.JPG" id="doodlingIMGS">
+				<img src="imgs/cat.JPG" id="doodlingIMGS">
+				<img src="imgs/tree.PNG" id="doodlingIMGS">
+				<img src="imgs/sunAndTree.PNG" id="doodlingIMGS">
+				<img src="imgs/bootifly.JPG" id="doodlingIMGS">
+				<img src="imgs/rainbow.JPG" id="doodlingIMGS">
+			</div>
+
+
+		</div>
+
+		<div id="db" class="centerContent">
+			<header>
+					<div class="logo">
+						<h2>Dragon Boat</h2>
+					</div>
+			</header>
+			<section class="student-description">
+				<p>
+					I've been on Lowell's dragon boat team since 2013. We race at Treasure Island, Youth Race, Macau International Race, and Vancouver. We practice 3 times a week, and condition 3 times a week. I am a conditioning leader, steersman, and a paddler.
+					<br>
+					<br>
+				</p>
+			</section>
+
+			<div>
+				<img src="imgs/conditioning.jpg" id="dbIMGS" onmouseover="changeText('This is my conditioning group')" onmouseout="defaultText()">
+				<br>
+			</div>
+
+
+		</div>
+
+
+		
+	</body>
+
+	<script type="text/javascript" src="skrollr.min.js"></script>
+	<script type="text/javascript">
+		var s = skrollr.init();
+	</script>
+
+</html>
