@@ -1,0 +1,71 @@
+.console {
+  background-color: var(--lightest-gray);
+  display: flex;
+  justify-content: center;
+  padding: 30px 10px;
+}
+
+.console-container {
+  max-width: 700px;
+  width: 75%;
+}
+
+.console-input {
+  font-size: 16px;
+  display: flex;
+}
+
+#blinker {
+  content: "";
+  background-color: #606060;
+  width: 8px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+.initiator {
+  display: flex;
+}
+
+.prompt {
+  width: 1px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  background-color: inherit;
+  color: transparent;
+  text-shadow: 0 0 0 var(--black);
+}
+
+.lin-world {
+  font-size: 16px;
+}
+
+#hint {
+  color: var(--light-gray);
+  font-size: 14px;
+}
+
+#one, #two, #three, #welcome, #lin-info{
+  display: none;
+}
+
+.result, .block-result {
+  color: var(--dark-gray);
+  font-size: 14px;
+  margin-left: 20px;
+  margin-bottom: 0;
+}
+
+.block-result {
+  margin-left: 45px;
+}
+
+.section {
+  margin: 1em;
+}

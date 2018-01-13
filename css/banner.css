@@ -1,0 +1,16 @@
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background-color: var(--white);
+}
+
+.paddles {
+  width: 150px;
+  line-height: 20px;
+}
+
+.totoro {
+  width: 300px;
+}

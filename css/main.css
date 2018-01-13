@@ -1,0 +1,21 @@
+@import "colors.css";
+@import "header.css";
+@import "banner.css";
+@import "console.css";
+
+html, body {
+  margin: 0;
+  background-color: var(--lightest-gray)
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  font-family: monospace;
+}
+
+p {
+  margin: 0;
+}

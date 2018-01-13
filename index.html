@@ -1,9 +1,156 @@
-<html>
+<!DOCTYPE html>
+<html onclick="focusInput()">
   <head>
-    <link href="css/style.min.css" rel="stylesheet" />
+    <title>Lin Chen</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script type="text/javascript">
+      function disappear() {
+        document.getElementById('hint').style.display= 'none';
+      }
+      function search(e) {
+        if (event.key == 'Enter' && e.value == "open Lin.world") {
+          e.disabled = true;
+          document.getElementById("blinker").style.display= 'none';
+          show("one");
+          setTimeout("show('two')", 1000);
+          setTimeout("show('three')", 2000);
+          setTimeout("show('welcome')", 3000);
+          setTimeout("show('lin-info')", 4000);
+        }
+      }
+      function show(id) {
+        document.getElementById(id).style.display= 'block';
+      }
+      function focusInput() {
+        document.getElementById("myInput").focus();
+      }
+      function increase(e) {
+        e.style.width = ((e.value.length + 1) * 10) + 'px';
+      }
+    </script>
   </head>
-  <body>
-    <div id="container"></div>
-    <script src="output/main.js"></script>
-  </body>
+  <body onclick="focusInput()">
+    <!-- header -->
+    <div class="header">
+      <div class="nav-buttons">
+        <a class="nav-button">About</a>
+        <a class="nav-button" href="resume/index.html">Resume</a>
+        <a class="nav-button">Fun</a>
+      </div>
+      <div class="external-buttons">
+        <a href="https://www.linkedin.com/in/lin00">
+          <img class="imgs" src="imgs/linked_in_icon.png"/>
+        </a>
+        <a href="https://www.github.com/lin00">
+          <img class="imgs" src="imgs/github_icon.png"/>
+        </a>
+      </div>
+    </div>
+
+    <!-- banner -->
+    <div class="banner">
+      <img class="paddles" src="imgs/paddles.jpeg" />
+      <img class="totoro" src="imgs/totoro_vector.jpg" />
+      <img class="paddles" src="imgs/paddles.jpeg" />
+    </div>
+
+    <!-- console -->
+    <div class="console" onclick="focusInput()">
+      <div class="console-container">
+        <div class="initiator">
+          <div class="console-input">
+            <div class="directions">Lins-world:/</div>
+          </div>
+          <input id="myInput" class="prompt" type="text" autofocus onkeypress="increase(this);disappear();search(this)"/>
+          <div id="blinker"></div>
+          <div id="hint">open Lin.world</div>
+        </div>
+        <div class="lin-world">
+          <p id='one'>.</p>
+          <p id='two'>.</p>
+          <p id='three'>.</p>
+          <p id='welcome'>Welcome!</p>
+          <div id='lin-info'>
+            <div class="section">
+              <p class="input">
+                > Lin.home
+              </p>
+              <p class="result">
+                => "San Francisco, California"
+              </p>
+            </div>
+            <div class="section">
+              <p class="input">
+                > Lin.university
+              </p>
+              <p class="result">
+                => "Virginia Tech"
+              </p>
+            </div>
+            <div class="section">
+              <p class="input">
+                > Lin.major
+              </p>
+              <p class="result">
+                => "Computer Science"
+              </p>
+            </div>
+            <div class="section">
+              <p class="input">
+                > Lin.minor
+              </p>
+              <p class="result">
+                => "Business"
+              </p>
+            </div>
+            <div class="section">
+              <p class="input">
+                > Lin.expectedGraduation
+              </p>
+              <p class="result">
+                => "Spring 2020"
+              </p>
+            </div>
+            <div class="section">
+              <p class="input">
+                > Lin.interests
+              </p>
+              <p class="result">
+                => ["Code", "Dance", "Dragon boat", "Watch Drama", "Boba"]
+              </p>
+            </div>
+            <div class="section">
+              <p class="input">
+                > Lin.workExperiences.last
+              </p>
+              <p class="result">
+                => company: Fig
+              </p>
+              <div class="block-result">
+                role: Software Engineer Intern <br />
+                start: June 2017 <br />
+                end: August 2017 <br />
+              </div>
+            </div>
+            <div class="section">
+              <p class="input">
+                > Lin.resume
+              </p>
+              <p class="result">
+                => "<a href="/resume/">lin.pdf</a>"
+              </p>
+            </div>
+            <div class="section">
+              <p class="input">
+                > Lin.email
+              </p>
+              <p class="result">
+                => "<a href="mailto:lichen9@vt.edu">lichen9@vt.edu</a>"
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 </html>
