@@ -17,6 +17,9 @@
           setTimeout("show('welcome')", 3000);
           setTimeout("show('lin-info')", 4000);
         }
+        else if (event.key == 'Enter' && e.value != "open Lin.world") {
+          alert('Not quite, try again. (hint: try "open Lin.world")');
+        }
       }
       function show(id) {
         document.getElementById(id).style.display= 'block';
@@ -33,7 +36,7 @@
     <!-- header -->
     <div class="header">
       <div class="nav-buttons">
-        <a class="nav-button">About</a>
+        <a class="nav-button" href="/">About</a>
         <a class="nav-button" href="resume">Resume</a>
         <a class="nav-button">Fun</a>
       </div>
@@ -45,6 +48,11 @@
           <img class="imgs" src="imgs/github-icon.png"/>
         </a>
       </div>
+    </div>
+
+    <!-- name -->
+    <div class="name">
+      Lin Chen
     </div>
 
     <!-- banner -->
@@ -115,9 +123,15 @@
               <p class="input">
                 > Lin.interests
               </p>
-              <p class="result">
-                => ["Code", "Dance", "Dragon boat", "Watch Drama", "Boba"]
-              </p>
+              <div class="interests result">
+                => [
+                <li>"Code",<span><img class="tooltip-img" src="imgs/matrix.gif"/></span></li>
+                <li>"Dance",<span><img class="tooltip-img" src="imgs/bts_dance.gif"/></li>
+                <li>"Dragon boat",<span><img class="tooltip-img" src="imgs/db.gif"/></li>
+                <li>"Watch Drama",<span><img class="tooltip-img" src="imgs/dramas.gif"/></li>
+                <li>"Boba"<span><img class="tooltip-img" src="imgs/boba.gif"/></li>
+                ]
+              </div>
             </div>
             <div class="section">
               <p class="input">

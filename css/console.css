@@ -69,3 +69,31 @@
 .section {
   margin: 1em;
 }
+
+.interests {
+  display: flex;
+}
+
+.interests li {
+  list-style: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.interests li > span {
+  position: relative;
+  display:none;
+}
+
+.interests li:hover > span {
+  position: absolute;
+  top: 20px;
+  display: block;
+  background: var(--darker-gray);
+  padding:2px;
+  left: calc(2em - 125px);
+}
+
+.tooltip-img {
+  width: 250px;
+}

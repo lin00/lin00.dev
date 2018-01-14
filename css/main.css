@@ -2,6 +2,8 @@
 @import "header.css";
 @import "banner.css";
 @import "console.css";
+@import "name.css";
+@import "resume.css";
 
 html, body {
   margin: 0;
@@ -19,9 +21,4 @@ a {
 
 p {
   margin: 0;
-}
-
-.resume {
-  width: 100%;
-  height: 100%;
 }

@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px;
   background-color: var(--white);
 }
 
@@ -13,4 +12,13 @@
 
 .totoro {
   width: 300px;
+}
+
+@media (max-width: 1000px) {
+  .paddles {
+    width: 125px;
+  }
+  .totoro {
+    width: 250px;
+  }
 }
