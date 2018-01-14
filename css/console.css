@@ -34,7 +34,6 @@
 
 .prompt {
   width: 1px;
-  font-size: 16px;
   outline: none;
   border: none;
   background-color: inherit;
@@ -42,7 +41,7 @@
   text-shadow: 0 0 0 var(--black);
 }
 
-.lin-world {
+.lin-world, .prompt {
   font-size: 16px;
 }
 

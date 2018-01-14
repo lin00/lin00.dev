@@ -3,11 +3,9 @@
   display: flex;
   justify-content: space-between;
 }
-
 .nav-buttons {
   padding: 14px 16px;
 }
-
 .header .nav-button {
   background-color: inherit;
   border: none;
@@ -18,20 +16,16 @@
   margin: 0 20px;
   color: var(--white);
 }
-
 .header a:hover {
   font-size: 30px;
 }
-
 .external-buttons {
   padding: 10px;
 }
-
 .imgs {
   width: 30px;
   transition: 0.5s;
 }
-
 .imgs:hover {
   width: 50px;
 }
