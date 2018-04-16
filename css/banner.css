@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   background-color: var(--white);
+  padding-bottom: 50px;
 }
 
 .paddles {
@@ -14,7 +15,7 @@
   width: 300px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 600px) {
   .paddles {
     width: 125px;
   }

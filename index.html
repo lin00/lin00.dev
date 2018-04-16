@@ -4,11 +4,23 @@
     <title>Lin Chen</title>
     <link rel="stylesheet" href="css/main.css" />
     <script type="text/javascript">
-      function disappear() {
-        document.getElementById('hint').style.display= 'none';
+      window.onload = function() {
+        if (localStorage.entered == true) {
+          document.getElementById("blinker").style.display= 'none';
+          var myInput = document.getElementById("myInput");
+          myInput.value = "open Lin.world";
+          show('one')
+          show('two');
+          show('three');
+          show('welcome');
+          show('lin-info');
+        }
       }
+    </script>
+    <script type="text/javascript">
       function search(e) {
         if (event.key == 'Enter' && e.value == "open Lin.world") {
+          localStorage.entered = true;
           e.disabled = true;
           document.getElementById("blinker").style.display= 'none';
           show("one");
@@ -27,26 +39,31 @@
       function focusInput() {
         document.getElementById("myInput").focus();
       }
-      function increase(e) {
-        e.style.width = ((e.value.length + 1) * 10) + 'px';
-      }
     </script>
   </head>
   <body onclick="focusInput()">
     <!-- header -->
     <div class="header">
-      <div class="nav-buttons">
-        <a class="nav-button" href="/">About</a>
-        <a class="nav-button" href="resume">Resume</a>
-        <!-- <a class="nav-button">Fun</a> -->
-      </div>
-      <div class="external-buttons">
-        <a href="https://www.linkedin.com/in/lin00">
-          <img class="imgs" src="imgs/linked_in_icon.png"/>
-        </a>
-        <a href="https://www.github.com/lin00">
-          <img class="imgs" src="imgs/github-icon.png"/>
-        </a>
+      <div class="nav-buttons row-display">
+        <div class="icon-links">
+          <a class="icon-link" href="lin00.github.io">
+            <img class="imgs" src="imgs/home_icon.png"/>
+          </a>
+        </div>
+        <div class="nav-buttons">
+          <div class="link-buttons">
+            <a class="link-button" href="resume">Resume</a>
+            <!-- <a class="link-button">Fu-->
+          </div>
+          <div class="icon-links">
+            <a class="icon-link" href="https://www.linkedin.com/in/lin00">
+              <img class="imgs" src="imgs/linked_in_icon.png"/>
+            </a>
+            <a class="icon-link" href="https://www.github.com/lin00">
+              <img class="imgs" src="imgs/github-icon.png"/>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -69,9 +86,8 @@
           <div class="console-input">
             <div class="directions">Lins-world:/</div>
           </div>
-          <input id="myInput" class="prompt" type="text" autofocus onkeypress="increase(this);disappear();search(this)"/>
+          <input id="myInput" class="prompt" type="text" value="open Lin.world" autofocus onkeypress="search(this)"/>
           <div id="blinker"></div>
-          <div id="hint">open Lin.world</div>
         </div>
         <div class="lin-world">
           <p id='one'>.</p>
@@ -124,26 +140,32 @@
                 > Lin.interests
               </p>
               <div class="interests result">
-                => [
-                <li>"Code",<span><img class="tooltip-img" src="imgs/matrix.gif"/></span></li>
-                <li>"Dance",<span><img class="tooltip-img" src="imgs/bts_dance.gif"/></li>
-                <li>"Dragon boat",<span><img class="tooltip-img" src="imgs/db.gif"/></li>
-                <li>"Watch Drama",<span><img class="tooltip-img" src="imgs/dramas.gif"/></li>
-                <li>"Boba"<span><img class="tooltip-img" src="imgs/boba.gif"/></li>
-                ]
+                <p class="indent">
+                  =>
+                </p>
+                <ul class="list">
+                  <li>["Code",<span><img class="tooltip-img" src="imgs/matrix.gif"/></span></li>
+                  <li>"Dance",<span><img class="tooltip-img" src="imgs/bts_dance.gif"/></li>
+                  <li>"Dragon boat",<span><img class="tooltip-img" src="imgs/db.gif"/></li>
+                  <li>"Watch Drama",<span><img class="tooltip-img" src="imgs/dramas.gif"/></li>
+                  <li>"Boba"]<span><img class="tooltip-img" src="imgs/boba.gif"/></li>
+                </ul>
               </div>
             </div>
             <div class="section">
               <p class="input">
                 > Lin.workExperiences.last
               </p>
-              <p class="result">
-                => company: Fig
-              </p>
-              <div class="block-result">
-                role: Software Engineer Intern <br />
-                start: June 2017 <br />
-                end: August 2017 <br />
+              <div class="result interests">
+                <p class="indent">
+                  =>
+                </p>
+                <div class="list">
+                  company: Fig <br />
+                  role: Software Engineer Intern <br />
+                  start: June 2017 <br />
+                  end: August 2017 <br />
+                </div>
               </div>
             </div>
             <div class="section">
@@ -166,5 +188,5 @@
         </div>
       </div>
     </div>
-
+  </body>
 </html>

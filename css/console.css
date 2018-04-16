@@ -1,17 +1,17 @@
 .console {
   background-color: var(--lightest-gray);
   display: flex;
-  justify-content: center;
   padding: 30px 10px;
+  font-size: 18px;
 }
 
 .console-container {
-  max-width: 700px;
-  width: 75%;
+  margin: auto;
+  justify-content: center;
+  padding: 20px 0;
 }
 
 .console-input {
-  font-size: 16px;
   display: flex;
 }
 
@@ -33,21 +33,17 @@
 }
 
 .prompt {
-  width: 1px;
   outline: none;
   border: none;
   background-color: inherit;
   color: transparent;
   text-shadow: 0 0 0 var(--black);
-}
-
-.lin-world, .prompt {
-  font-size: 16px;
+  font-size: 20px;
+  width: 170px;
 }
 
 #hint {
   color: var(--light-gray);
-  font-size: 14px;
 }
 
 #one, #two, #three, #welcome, #lin-info{
@@ -56,7 +52,6 @@
 
 .result, .block-result {
   color: var(--dark-gray);
-  font-size: 14px;
   margin-left: 20px;
   margin-bottom: 0;
 }
@@ -95,4 +90,22 @@
 
 .tooltip-img {
   width: 250px;
+}
+
+.list {
+  margin: 0;
+  padding-left: 12px;
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  .list {
+    display: inline-block;
+  }
+  .console {
+    font-size: 20px;
+  }
+  .initiator {
+    font-size: 40px;
+  }
 }
