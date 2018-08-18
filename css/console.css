@@ -9,6 +9,7 @@
   margin: auto;
   justify-content: center;
   padding: 20px 0;
+  min-width: 500px;
 }
 
 .console-input {
@@ -23,9 +24,15 @@
 }
 
 @keyframes blink {
-  0% { opacity: 1.0; }
-  50% { opacity: 0.0; }
-  100% { opacity: 1.0; }
+  0% {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
 }
 
 .initiator {
@@ -38,7 +45,9 @@
   background-color: inherit;
   color: transparent;
   text-shadow: 0 0 0 var(--black);
-  font-size: 20px;
+  padding: 0;
+  font-size: 18px;
+  margin-left: 10px;
   width: 170px;
 }
 
@@ -46,11 +55,16 @@
   color: var(--light-gray);
 }
 
-#one, #two, #three, #welcome, #lin-info{
+#one,
+#two,
+#three,
+#welcome,
+#lin-info {
   display: none;
 }
 
-.result, .block-result {
+.result,
+.block-result {
   color: var(--dark-gray);
   margin-left: 20px;
   margin-bottom: 0;
@@ -62,6 +76,7 @@
 
 .section {
   margin: 1em;
+  margin-left: 0;
 }
 
 .interests {
@@ -74,17 +89,17 @@
   cursor: pointer;
 }
 
-.interests li > span {
+.interests li>span {
   position: relative;
-  display:none;
+  display: none;
 }
 
-.interests li:hover > span {
+.interests li:hover>span {
   position: absolute;
   top: 20px;
   display: block;
   background: var(--darker-gray);
-  padding:2px;
+  padding: 2px;
   left: calc(2em - 125px);
 }
 
@@ -98,14 +113,14 @@
   display: flex;
 }
 
-@media (max-width: 600px) {
+@media (min-width: 1000px) {
   .list {
     display: inline-block;
   }
-  .console {
+  .console, .prompt {
     font-size: 20px;
   }
   .initiator {
-    font-size: 40px;
+    font-size: 30px;
   }
 }
