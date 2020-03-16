@@ -181,6 +181,10 @@ var graduate = {
       wordWrapWidth: 200
     };
 
+    if (document.getElementById("name").value !== "") {
+      name = document.getElementById("name").value;
+    }
+
     this.text = game.add.text(0, 0, `Congrats, ${name}!`, style);
     this.text.x += this.speech.x + 30;
     this.text.y +=
@@ -254,4 +258,4 @@ function uploadBg() {
 game.state.add("menu", menu);
 game.state.add("graduate", graduate);
 
-game.state.start("graduate");
+game.state.start("menu");
