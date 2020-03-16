@@ -11,11 +11,11 @@ body {
 
 body {
   display: flex;
-  justify-content: center;
   align-content: center;
   background: #6b92b9;
   flex-direction: column;
   align-items: center;
+  margin-top: 30px;
 }
 
 input {
@@ -23,13 +23,29 @@ input {
   width: 150px;
 }
 
+p {
+  width: 600px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 .customize {
+  width: 380px;
+  margin: auto;
   margin-bottom: 10px;
 }
 
 .title {
   text-align: center;
   margin-bottom: 20px;
+}
+
+.gameContainer {
+  margin-bottom: 100px;
 }
 
 #gameDiv {
