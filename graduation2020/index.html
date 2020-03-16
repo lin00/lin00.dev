@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Graduation</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <h1 class="title">Congrats on graduating!</h1>
+    <div class="customize">
+        <label for="grad">Photo of you: </label>
+        <input id="grad" type="file" onchange="uploadGrad()" name="grad" /> <br>
+        <label for="grad">Graduation background: </label>
+        <input id="background" type="file" onchange="uploadBg()" name="background" /> <br>
+        <label for="grad">Your Name: </label>
+        <input id="name" type="text" name="background" />
+    </div>
+
+    <div class="gameContainer">
+        <div id="gameDiv"></div>
+    </div>
+    <script src="phaser.min.js"></script>
+    <script src="game.js"></script>
+</body>
+
+</html>

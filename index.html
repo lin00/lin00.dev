@@ -1,194 +1,197 @@
 <!DOCTYPE html>
 <html onclick="focusInput()">
-  <head>
-    <title>Lin Chen</title>
-    <link rel="stylesheet" href="css/main.css" />
-    <script type="text/javascript">
-      window.onload = function() {
-        if (localStorage.entered == true) {
-          document.getElementById("blinker").style.display= 'none';
-          var myInput = document.getElementById("myInput");
-          myInput.value = "open Lin.world";
-          show('one')
-          show('two');
-          show('three');
-          show('welcome');
-          show('lin-info');
-        }
+
+<head>
+  <title>Lin Chen</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <script type="text/javascript">
+    window.onload = function () {
+      if (localStorage.entered == true) {
+        document.getElementById("blinker").style.display = 'none';
+        var myInput = document.getElementById("myInput");
+        myInput.value = "open Lin.world";
+        show('one')
+        show('two');
+        show('three');
+        show('welcome');
+        show('lin-info');
       }
-    </script>
-    <script type="text/javascript">
-      function search(e) {
-        if (event.key == 'Enter' && e.value == "open Lin.world") {
-          localStorage.entered = true;
-          e.disabled = true;
-          document.getElementById("blinker").style.display= 'none';
-          show("one");
-          setTimeout("show('two')", 1000);
-          setTimeout("show('three')", 2000);
-          setTimeout("show('welcome')", 3000);
-          setTimeout("show('lin-info')", 4000);
-        }
-        else if (event.key == 'Enter' && e.value != "open Lin.world") {
-          alert('Not quite, try again. (hint: try "open Lin.world")');
-        }
+    }
+  </script>
+  <script type="text/javascript">
+    function search(e) {
+      if (event.key == 'Enter' && e.value == "open Lin.world") {
+        localStorage.entered = true;
+        e.disabled = true;
+        document.getElementById("blinker").style.display = 'none';
+        show("one");
+        setTimeout("show('two')", 1000);
+        setTimeout("show('three')", 2000);
+        setTimeout("show('welcome')", 3000);
+        setTimeout("show('lin-info')", 4000);
       }
-      function show(id) {
-        document.getElementById(id).style.display= 'block';
+      else if (event.key == 'Enter' && e.value != "open Lin.world") {
+        alert('Not quite, try again. (hint: try "open Lin.world")');
       }
-      function focusInput() {
-        document.getElementById("myInput").focus();
-      }
-    </script>
-  </head>
-  <body onclick="focusInput()">
-    <!-- header -->
-    <div class="header">
-      <div class="nav-buttons row-display">
-        <div class="nav-buttons">
-          <div class="link-buttons">
-            <a class="link-button" href="resume">Resume</a>
-            <!-- <a class="link-button">Fu-->
+    }
+    function show(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+    function focusInput() {
+      document.getElementById("myInput").focus();
+    }
+  </script>
+</head>
+
+<body onclick="focusInput()">
+  <!-- header -->
+  <div class="header">
+    <div class="nav-buttons row-display">
+      <div class="nav-buttons">
+        <div class="link-buttons">
+          <a class="link-button" href="resume">Resume</a>
+          <!-- <a class="link-button">Fu-->
+        </div>
+        <div class="icon-links">
+          <a class="icon-link" href="https://www.linkedin.com/in/lin00">
+            <img class="imgs" src="imgs/linked_in_icon.png" />
+          </a>
+          <a class="icon-link" href="https://www.github.com/lin00">
+            <img class="imgs" src="imgs/github-icon.png" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- name -->
+  <div class="name">
+    Lin Chen
+  </div>
+
+  <!-- banner -->
+  <div class="banner">
+    <img class="paddles" src="imgs/paddles.jpeg" />
+    <img class="totoro" src="imgs/totoro_vector.jpg" />
+    <img class="paddles" src="imgs/paddles.jpeg" />
+  </div>
+
+  <!-- console -->
+  <div class="console" onclick="focusInput()">
+    <div class="console-container">
+      <div class="initiator">
+        <div class="console-input">
+          <div class="directions">Lins-world:/</div>
+        </div>
+        <input id="myInput" class="prompt" type="text" value="open Lin.world" autofocus onkeypress="search(this)" />
+        <div id="blinker"></div>
+      </div>
+      <div class="lin-world">
+        <p id='one'>.</p>
+        <p id='two'>.</p>
+        <p id='three'>.</p>
+        <p id='welcome'>Welcome!</p>
+        <div id='lin-info'>
+          <div class="section">
+            <p class="input">
+              > Lin.home
+            </p>
+            <p class="result">
+              => "San Francisco, California"
+            </p>
           </div>
-          <div class="icon-links">
-            <a class="icon-link" href="https://www.linkedin.com/in/lin00">
-              <img class="imgs" src="imgs/linked_in_icon.png"/>
-            </a>
-            <a class="icon-link" href="https://www.github.com/lin00">
-              <img class="imgs" src="imgs/github-icon.png"/>
-            </a>
+          <div class="section">
+            <p class="input">
+              > Lin.university
+            </p>
+            <p class="result">
+              => "Virginia Tech"
+            </p>
+          </div>
+          <div class="section">
+            <p class="input">
+              > Lin.major
+            </p>
+            <p class="result">
+              => "Computer Science"
+            </p>
+          </div>
+          <div class="section">
+            <p class="input">
+              > Lin.expectedGraduation
+            </p>
+            <p class="result">
+              => "Spring 2020"
+            </p>
+          </div>
+          <div class="section">
+            <p class="input">
+              > Lin.interests
+            </p>
+            <div class="interests result">
+              <p class="indent">
+                =>
+              </p>
+              <ul class="list">
+                <li>["Code",<span><img class="tooltip-img" src="imgs/matrix.gif" /></span></li>
+                <li>"Dance",<span><img class="tooltip-img" src="imgs/bts_dance.gif" /></li>
+                <li>"Dragon boat",<span><img class="tooltip-img" src="imgs/db.gif" /></li>
+                <li>"Watch Drama",<span><img class="tooltip-img" src="imgs/dramas.gif" /></li>
+                <li>"Boba"]<span><img class="tooltip-img" src="imgs/boba.gif" /></li>
+              </ul>
+            </div>
+          </div>
+          <div class="section">
+            <p class="input">
+              > Lin.workExperiences.last
+            </p>
+            <div class="result interests">
+              <p class="indent">
+                =>
+              </p>
+              <div class="list">
+                company: Amazon <br />
+                role: Software Development Engineer Intern <br />
+                start: June 2019 <br />
+                end: August 2019 <br />
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <p class="input">
+              > Lin.workExperiences.next
+            </p>
+            <div class="result interests">
+              <p class="indent">
+                =>
+              </p>
+              <div class="list">
+                company: Amazon<br />
+                role: Software Engineer <br />
+                start: August 2020 <br />
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <p class="input">
+              > Lin.resume
+            </p>
+            <p class="result">
+              => "<a href="resume">lin.pdf</a>"
+            </p>
+          </div>
+          <div class="section">
+            <p class="input">
+              > Lin.email
+            </p>
+            <p class="result">
+              => "<a href="mailto:lin@lin00.dev">lin@lin00.dev</a>"
+            </p>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</body>
 
-    <!-- name -->
-    <div class="name">
-      Lin Chen
-    </div>
-
-    <!-- banner -->
-    <div class="banner">
-      <img class="paddles" src="imgs/paddles.jpeg" />
-      <img class="totoro" src="imgs/totoro_vector.jpg" />
-      <img class="paddles" src="imgs/paddles.jpeg" />
-    </div>
-
-    <!-- console -->
-    <div class="console" onclick="focusInput()">
-      <div class="console-container">
-        <div class="initiator">
-          <div class="console-input">
-            <div class="directions">Lins-world:/</div>
-          </div>
-          <input id="myInput" class="prompt" type="text" value="open Lin.world" autofocus onkeypress="search(this)"/>
-          <div id="blinker"></div>
-        </div>
-        <div class="lin-world">
-          <p id='one'>.</p>
-          <p id='two'>.</p>
-          <p id='three'>.</p>
-          <p id='welcome'>Welcome!</p>
-          <div id='lin-info'>
-            <div class="section">
-              <p class="input">
-                > Lin.home
-              </p>
-              <p class="result">
-                => "San Francisco, California"
-              </p>
-            </div>
-            <div class="section">
-              <p class="input">
-                > Lin.university
-              </p>
-              <p class="result">
-                => "Virginia Tech"
-              </p>
-            </div>
-            <div class="section">
-              <p class="input">
-                > Lin.major
-              </p>
-              <p class="result">
-                => "Computer Science"
-              </p>
-            </div>
-            <div class="section">
-              <p class="input">
-                > Lin.expectedGraduation
-              </p>
-              <p class="result">
-                => "Spring 2020"
-              </p>
-            </div>
-            <div class="section">
-              <p class="input">
-                > Lin.interests
-              </p>
-              <div class="interests result">
-                <p class="indent">
-                  =>
-                </p>
-                <ul class="list">
-                  <li>["Code",<span><img class="tooltip-img" src="imgs/matrix.gif"/></span></li>
-                  <li>"Dance",<span><img class="tooltip-img" src="imgs/bts_dance.gif"/></li>
-                  <li>"Dragon boat",<span><img class="tooltip-img" src="imgs/db.gif"/></li>
-                  <li>"Watch Drama",<span><img class="tooltip-img" src="imgs/dramas.gif"/></li>
-                  <li>"Boba"]<span><img class="tooltip-img" src="imgs/boba.gif"/></li>
-                </ul>
-              </div>
-            </div>
-            <div class="section">
-              <p class="input">
-                > Lin.workExperiences.last
-              </p>
-              <div class="result interests">
-                <p class="indent">
-                  =>
-                </p>
-                <div class="list">
-                  company: Amazon <br />
-                  role: Software Development Engineer Intern <br />
-                  start: June 2019 <br />
-                  end: August 2019 <br />
-                </div>
-              </div>
-            </div>
-            <div class="section">
-              <p class="input">
-                > Lin.workExperiences.current
-              </p>
-              <div class="result interests">
-                <p class="indent">
-                  =>
-                </p>
-                <div class="list">
-                  company: TBD <br />
-                  role: Software Engineer <br />
-                  start: August 2020 <br />
-                </div>
-              </div>
-            </div>
-            <div class="section">
-              <p class="input">
-                > Lin.resume
-              </p>
-              <p class="result">
-                => "<a href="resume">lin.pdf</a>"
-              </p>
-            </div>
-            <div class="section">
-              <p class="input">
-                > Lin.email
-              </p>
-              <p class="result">
-                => "<a href="mailto:lin@lin00.dev">lin@lin00.dev</a>"
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
 </html>
